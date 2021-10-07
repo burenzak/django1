@@ -8,9 +8,7 @@ class Post(models.Model):
 
     title = models.CharField(max_length=25)
     body = models.CharField(max_length=500)
-    models.CharField()
-
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
 
 
     def __str__(self):
